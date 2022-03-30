@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Gallery account</title>
+    <link rel="stylesheet" href="Gallery_account.css">
+   
+</head>
+<body>
+    <form action="Gallery_account.php" method="POST" onsubmit="test_submission(event)">
+        <div class="space">
+            
+            <h2>Experience more with us</h2>
+            <h4>Create account here</h4>
+            <label for="full_name">Full name</label><br>
+                <input type="text" id="full_name" name="fullname"><br><br>
+            <label for="email">E-mail</label><br>
+                <input type="email" id="email" name="mail"><br><br>
+            <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+            <label for="pass1">Password</label><br>
+                <input type="password" id="pass1" name="password" required><br><br>
+            <label for="pass2">Re-enter password</label><br>
+                <input type="password" id="pass2" onmouseleave="return password_validation()" required><br>
+
+            <div class="check" id="pass_check"></div><br><br>
+                <p1>Agree</p1><input type="checkbox" id="box" required> <br>
+                <p>You checking the box above means you agree to <a href="#" onclick="return Terms()">Terms & conditions</a> of our services</p><br><br>
+            <button type="submit" id="submitt" name="submitt">SUBMIT</button>   
+            <div class="loginBtn">
+                <button id="login"><a href="Gallery_accountLogin.html" id="login1">LOGIN</a></button>
+            </div>        
+        </div>
+    </form>  
+</body>
+
+<script>
+    function test_submission(event){
+        var password1 = document.getElementById("pass1").value;
+        var password2 = document.getElementById("pass2").value;
+
+        if(password1 != password2){
+            event.preventDefault();
+            alert("SUBMISSION FAILED\n Repeat it again");
+            window.history.back();
+        }else{
+            alert("sent successfully");
+        }
+    }
+    
+    function password_validation(){
+        var password1 = document.getElementById("pass1").value;
+        var password2 = document.getElementById("pass2").value;
+        var send = document.getElementById("submitt");
+        
+
+        if(password1 != password2){
+            document.getElementById('pass_check').innerHTML = "passwords don't match";
+            return false;
+        }
+        else if(password1.length < 8){
+            document.getElementById("pass_check").innerHTML = "Password must contain atleast 8 characters";
+            return false;
+        }
+        else{
+            document.getElementById('pass_check').innerHTML = "<span style= 'color: lawngreen; font-size: 17px;'>*Passwords Match</span>";
+            return true;
+        } 
+    }
+
+    function Terms(){
+        alert("Our Terms of service:\n"+
+            "We First of all Thankyou for choosing us as a company which can help you brand yourself."+
+            " We are committed to give you the best\n"+
+            "\n\n1. Create an account before using our products. This allows you to access all our services"+
+            "\n\n2. Posting of pictures which go aganist morals of our customers may lead to SUSPENSION of your account")
+    }
+
+</script>
+</html>

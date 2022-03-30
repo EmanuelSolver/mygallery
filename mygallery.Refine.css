@@ -1,0 +1,199 @@
+body{
+	width: 100%;
+    background-image: url("Images\\hotel.jpg");
+    animation: slider 45s infinite linear;
+	background-size: 100%;
+    
+}
+@keyframes slider{
+	0%{
+		background-image: url("Images\\hotel.jpg");
+	}
+	35%{
+		 background-image: url("Images\\beach.jpg");
+	}
+	75%{
+		 background-image: url("Images\\storm.jpg");
+	}
+	
+}
+
+.intro{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 80%;
+    height: 10%;
+}
+.intro h1{
+    color: rgb(4, 160, 160);
+    position: absolute;
+    left: auto;
+    top: 0%;
+    
+
+}
+.intro h3{
+    position: absolute;
+    right: 8%;
+    top: 41%;
+}
+.left_sidebar{
+    position: fixed;
+    transition: 0.5s ease;
+    width: 10%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background: linear-gradient(to top right, rgb(22, 248, 2, 0.9), rgb(3, 217, 245, 0.7));
+}
+.left_sidebar.active{
+    width: 3%;
+}
+.left_sidebar h4{
+    position: absolute;
+    color: rgb(122, 121, 120);
+    left: 20%;
+    width: 50%;
+    
+}
+.left_sidebar.active h4{
+    opacity: 0;
+}
+.left_sidebar .links{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+.left_sidebar.active .links{
+    opacity: 0;
+}
+.left_sidebar.active ~ .gallery{
+    position: absolute;
+    width: 81.5%;
+    left: 3%;
+}
+
+.left_sidebar .links a{
+    text-decoration: none;
+    line-height: 50px;
+    color: rgb(250, 34, 6);
+    font-weight: 700;
+}
+.left_sidebar img{
+    position: absolute;
+    top: 3%;
+    width: 20px;
+    height: 20px;
+}
+.left_sidebar .links .btn {
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+    color: rgb(230, 56, 25);
+    border: none;
+    font-weight: 800;
+    left: -5%;
+}
+
+.right_sidebar{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 15.5%;
+    height: 100%;
+
+}
+.right_sidebar video{
+    height: 100%;
+}
+
+.video_top{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(24, 248, 3, 0.8), rgba(3, 217, 245, 0.8)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: multiply;
+}
+.video_top h1{
+    font-size: 50px;
+    color: rgb(255, 255, 255);   
+}
+.image_container{
+    height: 120px;
+    width: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.gallery{
+    position: fixed;
+    transition: 0.5s ease;
+    top: 10%;
+    left: 10%;
+    width: 74.5%;
+    height: 90%;
+    border-radius: 2%;
+    overflow: hidden;
+    background: linear-gradient(to right bottom, rgba(3, 245, 253, 0.6), rgba(9, 44, 241, 0.5));
+
+}
+.gallery h2{
+    position: absolute;
+    left: 40%;
+    font-style: normal;
+    font-size: 25px;
+    text-shadow: 5px 5px 10px  rgb(3, 3, 3);
+    font-family: monospace ;
+    color: rgb(246, 248, 246);
+    font-weight: 1000;
+}
+.gallery h5{
+	position: absolute;
+	color: blue;
+	font-family: monospace;
+	top: 7%;
+	left: 36.5%;
+}
+.gallery .card-body{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 10%;
+    border-radius: 2%;
+    background-color: rgba(255,255,255,0.4);
+}
+.gallery .image_container{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.gallery .image_container img{
+    height: 166px;
+    width: 22.66%;
+    object-fit: cover;  
+    border-radius: 5%;
+	box-shadow: 1px 2px 10px white;
+}
+.gallery .image_container img:hover{
+    transform: scale(2.5);
+    position: absolute;
+    left: 40%;
+    top: 25%;
+}
+.image_container span{
+    color: rgb(247, 4, 4);
+    font-size: 28px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.gallery #image{
+    opacity: 0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gallery_accountLogin.css">
+    <title>Document</title>
+    <script>
+        function respond(){
+            var inf = "If you forgot Password click this link";
+            document.getElementById('response').innerHTML = inf;
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="login">
+        <div class="upper_side">
+            <button>Welcome</button>
+            <h2>Login Now for Exquisite Expi'</h2><br><br>
+            <p>Logging in gives you more...</p>
+            <img src="Images\globe_icon.jpg" alt="light">
+        </div>
+        <div class="lower_side">
+
+            <form action="GalleryLogin.php" method="POST">
+                <label for="username">UserName</label><br>
+                    <input type="text" id="username" name="username" required><br><br>
+                <label for="pass">Password</label><br>
+                    <input type="password" id="pass" name="pass" required><br><br>
+                
+                    <button type="submit" id="submit" name="login">Log in</button>
+                    <button id="create_account"><a href="Gallery_account.html">Create_Account</a></button><br><br>
+                <p></p>
+                <a href="changePassword.html"  onmouseover="respond()"><h3 id="forgot">Forgot Password?</h3></a> <br><br>
+                <div id="response"></div>
+            </form>
+            
+        </div>
+    </div>
+</body>
+
+</html>

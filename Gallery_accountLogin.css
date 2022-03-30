@@ -1,0 +1,125 @@
+body{
+    height: 100vh;
+    background-image: url('Images\\beach.jpg');
+	background-size: 100%;
+}
+.login{
+    position: fixed;
+    left: 25%;
+    width: 50%;
+    top: 10%;
+    height: 80%;
+    border-radius: 5%;
+    background: linear-gradient(to top, rgb(178, 180, 180), rgb(245, 248, 245));
+}
+.login .upper_side{
+    position: absolute;
+    border-radius: 2%;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 30%;
+    background-color: blue;
+}
+.login .upper_side button{
+    position: absolute;
+    width: 40%;
+    height: 25%;
+    left: 30%;
+    top: 10%;
+    border-radius: 10%;
+    border-width: 10px;
+    color: rgb(50, 5, 252);
+    font-style: italic;
+    font-family: monospace;
+}
+.login .upper_side h2{
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    color: aliceblue;
+}
+.login .upper_side p{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    color: aliceblue;
+    font-weight: 800;
+}
+.login .upper_side img{
+    position: absolute;
+    top: 73%;
+    left: 45%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.login .lower_side{
+    position: fixed;
+    top: 40%;
+    width: 100%;
+    height: 70%;
+}
+
+.login .lower_side label{
+    position: absolute;
+    left: 10%;
+    color: rgb(3, 3, 173);
+    
+}
+.login .lower_side input{
+    position: absolute;
+    left: 10%;
+    width: 30%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgb(241, 253, 253);
+
+}
+.login .lower_side button{
+    color: aliceblue;
+    background-color: blue;
+    border-radius: 20px;
+    border-width: 2px;
+    height: 30px;
+}
+
+.login .lower_side #submit{
+    position: absolute;
+    left: 10%;
+    width: 70px;
+}
+.login .lower_side  #create_account {
+    position: absolute;
+    left: 31%;
+    width: 10%;
+}
+.login .lower_side  #create_account a{
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+.login .lower_side #forgot{
+    position: absolute;
+    left: 10%;
+}
+.login .lower_side #forgot h3{
+    text-decoration: none;
+}
+.login .lower_side #response{
+    position: absolute;
+    left: 10%;
+    width: 20;
+    text-align: center;
+    color: rgb(248, 8, 176);
+}

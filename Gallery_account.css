@@ -1,0 +1,70 @@
+body{
+    max-height: 100vh;
+    background-image: url("Images\\myCube.png");
+    background-size: 85%;
+}
+.space{
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    height: 80%;
+    border-radius: 5%;
+    background-color: rgb(255,255,255,1);
+}
+.space h2{
+    text-align: center;
+    color: rgb(56, 4, 245);
+    
+    font-family:cursive ;
+}
+.space h4{
+    text-align: center;
+    color: rgb(112, 85, 209);
+    font-family:cursive ;
+}
+.space label, input, p{
+    position: absolute;
+    left: 30%;
+    width: 50%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+label{
+    color: blue;
+}
+.space p1{
+    position: absolute;
+    left: 35%;
+}
+.space #submitt{
+    position: absolute;
+    left: 30%;
+    bottom: 2%;
+    
+}
+
+.space #login{
+    position: absolute;
+    left: 70%;
+    bottom: 2%;
+    
+}
+.space button{
+    color: aliceblue;
+    background-color: rgb(25, 25, 204);
+}
+.space a{
+    text-decoration: none;
+}
+.space .loginBtn a{
+    color: aliceblue;
+}
+
+.space .check{
+    position: absolute;
+    left: 30%;
+    color: red;
+}
+

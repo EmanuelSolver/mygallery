@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify your account</title>
+    <link rel="stylesheet" href="Account_verify.css">
+</head>
+<body>
+    <div class="verifyForm">
+        <h2>Account Verification</h2>
+        
+            <div class="Phone_no">
+                <h4>You will receive a unique passcode for verification if You have created an account
+                <br><br>The code will be sent via Email</h4>
+                
+            </div>
+    
+        <form action="Gallery_account.php" method="POST">
+            <div class="verify">
+                <h3>Verify Your Account...</h3><br>
+                <label for="code">Enter OTP:</label><br>
+                <input type="text" id="code" name="OTP" required>
+                <button type="submit" name="Verify">VERIFY</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

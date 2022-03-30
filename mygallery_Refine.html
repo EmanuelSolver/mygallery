@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your_Gallery</title>
+    <link rel="stylesheet" href="mygallery.Refine.css">
+    <script>  
+        var images = []; //a global array of images
+       
+       function image_select(){
+           confirm("Do you want to upload selected image?");
+           var image = document.getElementById('image').files;
+           
+           for(i = 0; i < image.length; i++){
+               if(check_duplicate(image[i].name)){
+                   images.push({
+                   "name" : image[i].name,
+                   "url" : URL.createObjectURL(image[i]), 
+                   "file" : image[i],
+               })
+               }else{
+                   alert(image[i].name+" is already posted");
+               }
+               
+           }
+           //document.getElementById('form').reset();
+           document.getElementById('container').innerHTML = image_show();
+       }
+       
+       function image_show(){
+           var image = "";
+           images.forEach((i) => {
+               image += '<div class="image_container d-flex justify-content-center position-relative"><img src="'+i.url+'" alt="image"><span class="position-absolute" onclick="delete_image('+images.indexOf(i)+')">&times;</span></div>';
+               
+           })
+           return image;
+       }
+       
+	   
+       function delete_image(e){
+           images.splice(e, 1);
+           document.getElementById('container').innerHTML = image_show();
+       }
+
+
+       function check_duplicate(image){
+           var image = true;
+           if(images.length >0){
+               for(e = 0; e < images.length; e++){
+                   if(images[i].name == name){
+                       image = false;
+                       break;
+                   }
+               }
+           }
+           return image;
+       }
+
+       function move_leftsidebar(){
+           let icon = document.querySelector("#menu_icon");
+
+           let sidbar = document.querySelector(".left_sidebar");
+
+           icon.onclick = function(){
+               sidbar.classList.toggle("active");
+           }   
+       }
+
+   
+       function help(){
+           alert('We Regard you so much and welcome to our Help wizard::\n\n'+
+               '1. Click "Upload" link on the left to select a picture to replace the default icons\n\n\n'+
+               '2. Click the "Upload" link again to select all the pictures you want to upload\n\n\n'+
+               '3. Click the Menu icon to minimize/maximize the menu\n\n\n'+
+               '3. Currently we can only support 12 pictures but soon we will allow more\n\n\n'+
+               '4. To download an image, right click the image and select "Save image as..."\n\n\n'+
+               '5. To Remove any picture, click the "X" adjuscent to it\n\n\n'+
+               '6. Navigate through all other links for more\n\n'+
+               'Enjoy your experience with Personal Gallery');
+       }
+
+    </script>
+</head>
+
+
+<body onload="move_leftsidebar()">
+    <div class="intro">
+        <h1>Personal gallery</h1>
+        <h3>Cool Breeze always</h3>
+    </div>
+
+    <div class="left_sidebar">
+        <h4>Menu</h4>
+        <img src="Images\icons8-menu-24.png" alt="menu" id="menu_icon">
+        <div class="links">
+            <button class="btn" type="button" onclick="document.getElementById('image').click()">Upload</button><br><br><br>
+            <a href="Gallery_account.html">Join us</a><br><br>
+            <a href="Gallery_accountLogin.html">Log in</a><br><br>
+            <a href="#" id="help" onclick="help()">Find_help</a><br><br>
+            <a href="https://Persnonalmygallery@gmail.com" id="contact_head">Contact_us</a>
+                
+        </div>
+
+    </div>
+
+    <div class="right_sidebar">
+        <video autoplay loop muted>
+            <source src="Videos\Ink.mp4" type="video/mp4">
+        </video>
+
+        <div class="video_top">
+            <h1>A <br> D<br> V<br> E<br> R<br>T'<br><br>H<br> E<br> R<br> E</h1>
+        </div>
+    </div>
+    
+
+    <div class="gallery">
+        <h2>Upload Experience</h2>
+		<h5>If a photographer or Graphic designer, Showcase your talent with us</h5>
+        <div class="container ">
+            <div class="card">
+                <div class="card-header ">
+                    <form action="#" id="form">
+                        <input type="file" name="Image" id="image" multiple="" onchange="image_select()">
+                         
+                    </form>
+                </div>
+        
+                <div class="card-body " id="container">
+                    <div class="image_container">
+                        <img  src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        <img src="Images\img_icon2.png" alt="image" id="photo">
+                        
+                        <span>&times;</span>
+                   
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+</body>
+</html>
